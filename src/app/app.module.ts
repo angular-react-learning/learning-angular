@@ -8,6 +8,7 @@ import { TcsFormComponent } from './tcs-form/tcs-form.component';
 import { HeaderComponent } from './common/header/header.component';
 import { LeftColComponent } from './common/left-col/left-col.component';
 import { RightColComponent } from './common/right-col/right-col.component';
+import { SearchComponent } from './common/search/search.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { RightColComponent } from './common/right-col/right-col.component';
     TcsFormComponent,
     HeaderComponent,
     LeftColComponent,
-    RightColComponent
+    RightColComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,

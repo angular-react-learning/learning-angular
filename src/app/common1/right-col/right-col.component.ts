@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { SearchService } from "../../search.service"
-
 @Component({
   selector: 'app-right-col',
   templateUrl: './right-col.component.html',
@@ -9,11 +7,7 @@ import { SearchService } from "../../search.service"
 })
 export class RightColComponent implements OnInit {
 
-  listing : String[] = [];
-  
-  constructor(private searchService : SearchService) {
-      this.listing = this.searchService.peopleList()
-  }
+  constructor() { }
 
   ngOnInit(): void {
   }
