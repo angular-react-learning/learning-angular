@@ -2,4 +2,4 @@
     <app-tcs-listing [listing]="listing"></app-tcs-listing>
 </div>
 
-<app-colored></app-colored>
+<app-colored *ngIf="name % 2 === 0" [name]="name"></app-colored>
