@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { SearchService } from "../../search.service";
+
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -7,14 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
-  constructor() { }
+  constructor(private searchService : SearchService) { }
 
   ngOnInit(): void {
   }
 
   searchValueChange(event)
     {
-      console.log(event)
+      this.searchService.userSearched(event.target.value);
     }
 
 }
