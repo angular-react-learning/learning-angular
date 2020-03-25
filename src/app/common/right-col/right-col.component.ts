@@ -17,7 +17,10 @@ export class RightColComponent implements OnInit {
 
   ngOnInit(): void {
     this.listing = this.searchService.peopleList();
-    this.searchService.getSearchedUser().subscribe((data) => {
+    this.searchService.getSearchedUser()
+    
+    
+    .subscribe((data) => {
       this.listing = this.searchService.peopleList().filter((item) => {
         return item.toUpperCase().indexOf(data.user.toUpperCase()) > -1;
       })

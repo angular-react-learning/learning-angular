@@ -9,6 +9,7 @@ import { HeaderComponent } from './common/header/header.component';
 import { LeftColComponent } from './common/left-col/left-col.component';
 import { RightColComponent } from './common/right-col/right-col.component';
 import { SearchComponent } from './common/search/search.component';
+import { ColoredComponent } from './common/colored/colored.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SearchComponent } from './common/search/search.component';
     HeaderComponent,
     LeftColComponent,
     RightColComponent,
-    SearchComponent
+    SearchComponent,
+    ColoredComponent
   ],
   imports: [
     BrowserModule,

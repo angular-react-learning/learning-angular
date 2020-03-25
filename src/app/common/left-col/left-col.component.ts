@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { SearchService } from "../../search.service";
+
 @Component({
   selector: 'app-left-col',
   templateUrl: './left-col.component.html',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeftColComponent implements OnInit {
 
-  constructor() { }
+  constructor(private searchService : SearchService) { }
 
   ngOnInit(): void {
   }
+
+  userSearched(user)
+    {
+      this.searchService.userSearched(user)
+    }
 
 }

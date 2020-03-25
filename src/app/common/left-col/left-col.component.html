@@ -1,3 +1,5 @@
 <div class="left-col">
-    <app-search></app-search>
+    <app-search (searchedValue)="userSearched($event)"></app-search>
+    <!-- <app-search (searchedValue)="handler1()"></app-search>
+    <app-search (searchedValue)="handler2()"></app-search> -->
 </div>

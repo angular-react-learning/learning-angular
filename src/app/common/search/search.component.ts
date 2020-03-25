@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-
-import { SearchService } from "../../search.service";
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-search',
@@ -9,14 +7,15 @@ import { SearchService } from "../../search.service";
 })
 export class SearchComponent implements OnInit {
 
-  constructor(private searchService : SearchService) { }
+  constructor() { }
+
+  @Output() searchedValue = new EventEmitter();
 
   ngOnInit(): void {
   }
 
-  searchValueChange(event)
-    {
-      this.searchService.userSearched(event.target.value);
-    }
+  searchValueChange(event) {
+    this.searchedValue.emit(event.target.value)
+  }
 
 }
